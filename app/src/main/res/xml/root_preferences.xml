@@ -1,0 +1,16 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:defaultValue="@string/pref_text_size_default"
+        android:key="@string/pref_text_size_key"
+        android:title="@string/pref_text_size_label" />
+
+    <CheckBoxPreference
+        android:defaultValue="1"
+        android:key="@string/key_show_priority"
+        android:summaryOn="@string/pref_priorites_affichees"
+        android:summaryOff="@string/pref_priorites_non_affichees"
+        android:title="Afficher couleurs des priorités"/>
+
+
+</PreferenceScreen>

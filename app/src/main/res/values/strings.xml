@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TodoList</string>
+    <string name="ajout_de_tache">AJOUT DE TÂCHE</string>
+    <string name="priorite">Priorité</string>
+    <string name="haute">HAUTE</string>
+    <string name="moyenne">MOYENNE</string>
+    <string name="basse">BASSE</string>
+    <string name="button_preference_label">Préférences</string>
+    <string name="settings_activity_label">Paramètres</string>
+    <string name="pref_text_size_default">16</string>
+    <string name="pref_text_size_key">key_pref_text_size</string>
+    <string name="pref_text_size_label">Taille de la police</string>
+    <string name="pref_priorites_affichees">Activées</string>
+    <string name="pref_priorites_non_affichees">Desactivées</string>
+    <string name="key_show_priority">show_priorities_key</string>
+</resources>

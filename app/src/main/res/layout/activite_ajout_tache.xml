@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActiviteAjoutTache">
+
+    <EditText
+        android:id="@+id/et_saisie_tache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        tools:text="Acheter du pain"/>
+
+    <TextView
+        android:id="@+id/tv_priorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/priorite" />
+
+    <RadioGroup
+        android:id="@+id/rg_priorites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_haute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/priorite_haute"
+            android:text="@string/haute" />
+
+        <RadioButton
+            android:id="@+id/rb_moyenne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/priorite_moyenne"
+            android:text="@string/moyenne" />
+
+        <RadioButton
+            android:id="@+id/rb_basse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/priorite_basse"
+            android:text="@string/basse" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/b_ajouter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="on_ajouter"
+        android:text="AJOUTER" />
+
+</LinearLayout>
