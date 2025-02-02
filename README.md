@@ -1,143 +1,141 @@
 ---
 
-# Application ToDoList
+# ToDoList Application
 
-Je présente ici mon projet **Application ToDoList**, développé dans le cadre de mon unité de formation Android. Ce projet a été conçu comme fil conducteur et a évolué au fil des sessions pour intégrer les principaux concepts du développement Android avec Kotlin. L'application permet à l'utilisateur de gérer une liste de tâches à réaliser, en affectant une priorité à chaque tâche et en les affichant de manière dynamique.
-
----
-
-## Table des matières
-
-- [Présentation du projet](#présentation-du-projet)
-- [Fonctionnalités](#fonctionnalités)
-- [Technologies et outils](#technologies-et-outils)
-- [Développement et organisation](#développement-et-organisation)
-- [Installation et exécution](#installation-et-exécution)
-- [Contribution](#contribution)
-- [Licence](#licence)
+This repository contains my **ToDoList Application** project, developed as part of my Android development training. This project served as a continuous learning experience, evolving session by session as I integrated key Android concepts using Kotlin. The application allows users to manage a list of tasks by adding tasks with different priority levels and displaying them dynamically.
 
 ---
 
-## Présentation du projet
+## Table of Contents
 
-Dans le cadre de mes études, j'ai créé cette application pour mettre en pratique divers concepts de développement Android. Dès la première session, j'ai débuté avec la création d'une interface simple dans Android Studio, puis j'ai progressivement intégré :
-
-- La gestion d'interfaces graphiques via XML
-- L'utilisation de ListView et RecyclerView associées à des Adapters
-- La compréhension du cycle de vie des activités Android
-- La sauvegarde de données via une base de données SQLite
-- La gestion des préférences utilisateur grâce aux SharedPreferences
-
-Chaque étape du développement a permis d'approfondir mes connaissances et d'améliorer l'application.
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies and Tools](#technologies-and-tools)
+- [Development Process](#development-process)
+- [Installation and Execution](#installation-and-execution)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
-## Fonctionnalités
+## Project Overview
 
-L'application ToDoList que j'ai développée offre les fonctionnalités suivantes :
+As part of my studies, I built this application to put into practice various Android development concepts. Starting with creating a simple user interface in Android Studio, I gradually enhanced the application by incorporating:
 
-- **Ajout de tâches** : L'utilisateur peut saisir le nom d'une tâche et lui attribuer une priorité (Haute, Moyenne ou Basse).
-- **Affichage de la liste des tâches** : La liste est présentée dynamiquement dans un widget (d'abord avec ListView, puis avec RecyclerView) qui se met à jour lors des ajouts ou suppressions.
-- **Suppression de tâches** : Grâce à un geste de swipe sur un élément de la liste, l'utilisateur peut supprimer une tâche.
-- **Sauvegarde en base de données** : Les tâches sont sauvegardées dans une base SQLite pour garantir leur persistance.
-- **Personnalisation via les préférences** : L'application offre la possibilité d'afficher/cacher la priorité et de modifier la taille de la police dans la liste des tâches grâce aux préférences.
+- Graphical user interfaces using XML
+- Lists with ListView and later RecyclerView along with custom Adapters
+- Android Activity lifecycle management
+- Data persistence using SQLite
+- User preferences management using SharedPreferences
 
----
-
-## Technologies et outils
-
-Pour le développement de cette application, j'ai utilisé les technologies et outils suivants :
-
-- **Langage** : Kotlin (le langage recommandé par Google pour Android)
-- **IDE** : Android Studio (avec un SDK minimum Android 8)
-- **Interface Utilisateur** :
-  - Fichiers XML pour la définition des layouts (LinearLayout, ConstraintLayout, etc.)
-  - Widgets standards (TextView, EditText, RadioButton, Toast, etc.)
-- **Liste** :
-  - Initialement avec ListView et un Adapter personnalisé
-  - Transition vers RecyclerView pour une gestion optimisée du recyclage des vues
-- **Base de données** : SQLite (mise en place d’un contrat et de méthodes d'insertion/suppression)
-- **Préférences** : SharedPreferences pour la sauvegarde et la gestion des paramètres utilisateur
+Each phase of development allowed me to deepen my understanding and improve the functionality and usability of the application.
 
 ---
 
-## Développement et organisation
+## Features
 
-Le développement de l'application s'est structuré autour de plusieurs sessions et TP, chacun correspondant à un aspect clé de la formation :
+The ToDoList Application offers the following functionalities:
 
-1. **Prise en main d'Android Studio et création d'une interface simple**  
-   J'ai commencé par créer un projet vide, puis j'ai ajouté une activité et conçu l'interface graphique (`activity_main.xml`) en utilisant des widgets simples. J'ai également intégré des Toasts et des logs pour faciliter le débogage.
-
-2. **Utilisation de ListView, RecyclerView et Adapters**  
-   Pour améliorer la gestion de la liste des tâches, j'ai d'abord utilisé un ListView avant de passer à un RecyclerView, ce qui m'a permis d'apprendre à implémenter des Adapters et à gérer des actions utilisateur comme le swipe pour supprimer des tâches.
-
-3. **Gestion du cycle de vie des activités**  
-   J'ai redéfini et logué les méthodes du cycle de vie dans `MainActivity` pour observer et comprendre les changements d'état de l'activité (notamment lors d'une rotation d'écran). J'ai également mis en œuvre l'interface `Parcelable` pour gérer la persistance de l'état.
-
-4. **Sauvegarde des données en base**  
-   J'ai intégré une base de données SQLite pour stocker les tâches, ce qui m'a permis de travailler sur la création d'un contrat de base, la gestion de l'insertion et la suppression de données, ainsi que leur affichage dans un RecyclerView.
-
-5. **Implémentation des préférences**  
-   Enfin, j'ai ajouté une interface de préférences pour permettre à l'utilisateur de personnaliser l'affichage des tâches (affichage de la priorité, taille de la police, etc.) en utilisant SharedPreferences.
+- **Task Addition:** Users can enter a task name and assign a priority (High, Medium, or Low).
+- **Task Display:** Tasks are dynamically displayed in a list (initially using ListView and later transitioned to RecyclerView) that updates as tasks are added or removed.
+- **Task Deletion:** Users can remove tasks by swiping on a list item.
+- **Data Persistence:** All tasks are stored in an SQLite database to ensure data persistence.
+- **User Preferences:** The app allows customization of display settings, such as toggling the visibility of task priority and adjusting the font size of the task list, using SharedPreferences.
 
 ---
 
-## Installation et exécution
+## Technologies and Tools
 
-Pour installer et exécuter cette application sur votre machine, suivez les étapes ci-dessous :
+The following technologies and tools were used to develop this application:
 
-1. **Cloner le dépôt** :
+- **Language:** Kotlin (the recommended language for Android development)
+- **IDE:** Android Studio (with a minimum SDK version of Android 8)
+- **User Interface:**
+  - XML layout files (e.g., LinearLayout, ConstraintLayout)
+  - Standard Android widgets (TextView, EditText, RadioButton, Toast, etc.)
+- **List Implementation:**
+  - Initially implemented with ListView and a custom Adapter
+  - Later enhanced using RecyclerView for better view recycling and performance
+- **Database:** SQLite (with a defined contract and methods for insertion/deletion)
+- **Preferences:** SharedPreferences for storing and managing user settings
+
+---
+
+## Development Process
+
+The development of this application was organized into several sessions, each focusing on a specific aspect of Android development:
+
+1. **Getting Started with Android Studio and Creating a Simple Interface**  
+   I began by creating an empty project and adding an activity. I designed the main interface (`activity_main.xml`) using basic widgets and implemented Toasts and logging for debugging purposes.
+
+2. **Using ListView, RecyclerView, and Adapters**  
+   To improve the task display functionality, I first used a ListView with a custom Adapter, then transitioned to RecyclerView. This phase involved implementing Adapters and handling user interactions like swipe-to-delete.
+
+3. **Managing the Activity Lifecycle**  
+   I redefined and logged the Activity lifecycle methods in `MainActivity` to observe state changes, especially during screen rotations. I also implemented the `Parcelable` interface to manage state persistence across configuration changes.
+
+4. **Data Persistence with SQLite**  
+   I integrated an SQLite database to store tasks, which involved setting up a database contract and methods for data manipulation. The RecyclerView was updated to reflect changes in the database.
+
+5. **Implementing User Preferences**  
+   Finally, I added a settings interface that allows users to customize the display (e.g., toggling task priority and adjusting font size) using SharedPreferences.
+
+---
+
+## Installation and Execution
+
+To install and run this application on your local machine, follow these steps:
+
+1. **Clone the Repository:**
 
    ```bash
-   git clone <URL_DU_DEPOT>
+   git clone <REPOSITORY_URL>
    ```
 
-2. **Ouvrir le projet dans Android Studio** :
-   - Lancez Android Studio et sélectionnez **File > Open**, puis choisissez le dossier cloné.
+2. **Open the Project in Android Studio:**
+   - Launch Android Studio and select **File > Open**, then choose the cloned project folder.
 
-3. **Configurer l'émulateur ou connecter un appareil** :
-   - Vous pouvez utiliser un émulateur configuré avec le SDK Android 8 (ou supérieur) ou connecter un appareil physique.
+3. **Set Up an Emulator or Connect a Device:**
+   - Use an Android emulator configured with SDK Android 8 (or higher) or connect a physical device.
 
-4. **Exécuter l'application** :
-   - Cliquez sur le bouton **Run** pour compiler et lancer l’application.
+4. **Run the Application:**
+   - Click the **Run** button in Android Studio to compile and launch the app.
 
 ---
 
-## Contribution
+## Contributing
 
-Bien que ce projet ait été réalisé dans le cadre de ma formation, toute suggestion d'amélioration ou contribution est la bienvenue. Si vous souhaitez proposer des modifications :
+Although this project was created as part of my coursework, I welcome any suggestions or improvements. To contribute:
 
-1. **Forkez le dépôt**.
-2. **Créez une branche** pour votre fonctionnalité ou correction :
+1. **Fork the Repository.**
+2. **Create a New Branch** for your feature or fix:
 
    ```bash
-   git checkout -b feature/ma_nouvelle_fonctionnalite
+   git checkout -b feature/my-new-feature
    ```
 
-3. **Committez** vos modifications :
+3. **Commit Your Changes:**
 
    ```bash
-   git commit -m "Ajout de [fonctionnalité/correction] : description succincte"
+   git commit -m "Add [feature/fix]: brief description"
    ```
 
-4. **Poussez** la branche sur votre fork :
+4. **Push the Branch to Your Fork:**
 
    ```bash
-   git push origin feature/ma_nouvelle_fonctionnalite
+   git push origin feature/my-new-feature
    ```
 
-5. **Ouvrez une Pull Request**.
+5. **Open a Pull Request** on the main repository.
 
 ---
 
-## Licence
+## License
 
-Ce projet est distribué sous licence [MIT](LICENSE).
-
----
-
-*Ce projet reflète mon apprentissage progressif du développement Android et m'a permis d'explorer de nombreuses facettes de la création d'applications mobiles. N'hésitez pas à me contacter pour toute question ou suggestion.*
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-N'hésitez pas à adapter ce fichier selon l'évolution de votre projet ou en fonction des ajouts futurs.
+*This project reflects my progressive learning in Android development and my exploration of various aspects of mobile application creation. Please feel free to contact me with any questions or suggestions.*
+
+---
